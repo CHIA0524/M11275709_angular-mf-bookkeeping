@@ -1,0 +1,2832 @@
+{
+  "rtnCode": "000000",
+  "rtnMsg": "成功",
+  "data": {
+    "totalAssets": 8750000,
+    "monthlyIncome": 95000,
+    "monthlyExpense": 48500,
+    "netWorth": 6420000,
+    "assetTrends": [
+      {
+        "date": "2022-01",
+        "totalAssets": 5030452,
+        "monthlyIncome": 98022,
+        "monthlyExpense": 42903,
+        "netWorth": 4275884,
+        "cash": 1509136,
+        "investment": 2263703,
+        "property": 1257613,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 8705,
+            "percentage": 15.04
+          },
+          {
+            "category": "交通",
+            "amount": 8738,
+            "percentage": 15.1
+          },
+          {
+            "category": "娛樂",
+            "amount": 7556,
+            "percentage": 13.06
+          },
+          {
+            "category": "購物",
+            "amount": 2896,
+            "percentage": 5
+          },
+          {
+            "category": "醫療",
+            "amount": 9848,
+            "percentage": 17.02
+          },
+          {
+            "category": "教育",
+            "amount": 7140,
+            "percentage": 12.34
+          },
+          {
+            "category": "其他",
+            "amount": 12987,
+            "percentage": 22.44
+          }
+        ]
+      },
+      {
+        "date": "2022-02",
+        "totalAssets": 5052117,
+        "monthlyIncome": 107817,
+        "monthlyExpense": 58908,
+        "netWorth": 4294299,
+        "cash": 1515635,
+        "investment": 2273453,
+        "property": 1263029,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 15292,
+            "percentage": 22.95
+          },
+          {
+            "category": "交通",
+            "amount": 5870,
+            "percentage": 8.81
+          },
+          {
+            "category": "娛樂",
+            "amount": 12160,
+            "percentage": 18.25
+          },
+          {
+            "category": "購物",
+            "amount": 16652,
+            "percentage": 24.99
+          },
+          {
+            "category": "醫療",
+            "amount": 2661,
+            "percentage": 3.99
+          },
+          {
+            "category": "教育",
+            "amount": 10207,
+            "percentage": 15.32
+          },
+          {
+            "category": "其他",
+            "amount": 3799,
+            "percentage": 5.7
+          }
+        ]
+      },
+      {
+        "date": "2022-03",
+        "totalAssets": 5259157,
+        "monthlyIncome": 105142,
+        "monthlyExpense": 48841,
+        "netWorth": 4470283,
+        "cash": 1577747,
+        "investment": 2366621,
+        "property": 1314789,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 3592,
+            "percentage": 6.31
+          },
+          {
+            "category": "交通",
+            "amount": 13501,
+            "percentage": 23.71
+          },
+          {
+            "category": "娛樂",
+            "amount": 9398,
+            "percentage": 16.51
+          },
+          {
+            "category": "購物",
+            "amount": 2110,
+            "percentage": 3.71
+          },
+          {
+            "category": "醫療",
+            "amount": 7948,
+            "percentage": 13.96
+          },
+          {
+            "category": "教育",
+            "amount": 14127,
+            "percentage": 24.81
+          },
+          {
+            "category": "其他",
+            "amount": 6260,
+            "percentage": 10.99
+          }
+        ]
+      },
+      {
+        "date": "2022-04",
+        "totalAssets": 5253580,
+        "monthlyIncome": 84407,
+        "monthlyExpense": 35558,
+        "netWorth": 4465543,
+        "cash": 1576074,
+        "investment": 2364111,
+        "property": 1313395,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 2124,
+            "percentage": 4.48
+          },
+          {
+            "category": "交通",
+            "amount": 11359,
+            "percentage": 23.95
+          },
+          {
+            "category": "娛樂",
+            "amount": 2178,
+            "percentage": 4.59
+          },
+          {
+            "category": "購物",
+            "amount": 8565,
+            "percentage": 18.06
+          },
+          {
+            "category": "醫療",
+            "amount": 15643,
+            "percentage": 32.98
+          },
+          {
+            "category": "教育",
+            "amount": 3245,
+            "percentage": 6.84
+          },
+          {
+            "category": "其他",
+            "amount": 4312,
+            "percentage": 9.09
+          }
+        ]
+      },
+      {
+        "date": "2022-05",
+        "totalAssets": 5393267,
+        "monthlyIncome": 109559,
+        "monthlyExpense": 41312,
+        "netWorth": 4584277,
+        "cash": 1617980,
+        "investment": 2426970,
+        "property": 1348317,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 15207,
+            "percentage": 16.44
+          },
+          {
+            "category": "交通",
+            "amount": 12423,
+            "percentage": 13.43
+          },
+          {
+            "category": "娛樂",
+            "amount": 16008,
+            "percentage": 17.31
+          },
+          {
+            "category": "購物",
+            "amount": 8989,
+            "percentage": 9.72
+          },
+          {
+            "category": "醫療",
+            "amount": 15087,
+            "percentage": 16.31
+          },
+          {
+            "category": "教育",
+            "amount": 10165,
+            "percentage": 10.99
+          },
+          {
+            "category": "其他",
+            "amount": 14611,
+            "percentage": 15.8
+          }
+        ]
+      },
+      {
+        "date": "2022-06",
+        "totalAssets": 5474798,
+        "monthlyIncome": 98862,
+        "monthlyExpense": 40882,
+        "netWorth": 4653578,
+        "cash": 1642439,
+        "investment": 2463659,
+        "property": 1368700,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 15398,
+            "percentage": 32.33
+          },
+          {
+            "category": "交通",
+            "amount": 9991,
+            "percentage": 20.98
+          },
+          {
+            "category": "娛樂",
+            "amount": 3313,
+            "percentage": 6.96
+          },
+          {
+            "category": "購物",
+            "amount": 6265,
+            "percentage": 13.15
+          },
+          {
+            "category": "醫療",
+            "amount": 7349,
+            "percentage": 15.43
+          },
+          {
+            "category": "教育",
+            "amount": 2175,
+            "percentage": 4.57
+          },
+          {
+            "category": "其他",
+            "amount": 3138,
+            "percentage": 6.59
+          }
+        ]
+      },
+      {
+        "date": "2022-07",
+        "totalAssets": 5539220,
+        "monthlyIncome": 82114,
+        "monthlyExpense": 35705,
+        "netWorth": 4708337,
+        "cash": 1661766,
+        "investment": 2492649,
+        "property": 1384805,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 4342,
+            "percentage": 7.55
+          },
+          {
+            "category": "交通",
+            "amount": 2130,
+            "percentage": 3.71
+          },
+          {
+            "category": "娛樂",
+            "amount": 13501,
+            "percentage": 23.49
+          },
+          {
+            "category": "購物",
+            "amount": 13534,
+            "percentage": 23.55
+          },
+          {
+            "category": "醫療",
+            "amount": 2005,
+            "percentage": 3.49
+          },
+          {
+            "category": "教育",
+            "amount": 13698,
+            "percentage": 23.83
+          },
+          {
+            "category": "其他",
+            "amount": 8267,
+            "percentage": 14.38
+          }
+        ]
+      },
+      {
+        "date": "2022-08",
+        "totalAssets": 5674038,
+        "monthlyIncome": 90043,
+        "monthlyExpense": 55612,
+        "netWorth": 4822932,
+        "cash": 1702211,
+        "investment": 2553317,
+        "property": 1418510,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 14641,
+            "percentage": 18.31
+          },
+          {
+            "category": "交通",
+            "amount": 12240,
+            "percentage": 15.31
+          },
+          {
+            "category": "娛樂",
+            "amount": 6944,
+            "percentage": 8.68
+          },
+          {
+            "category": "購物",
+            "amount": 15065,
+            "percentage": 18.84
+          },
+          {
+            "category": "醫療",
+            "amount": 15970,
+            "percentage": 19.97
+          },
+          {
+            "category": "教育",
+            "amount": 5094,
+            "percentage": 6.37
+          },
+          {
+            "category": "其他",
+            "amount": 10013,
+            "percentage": 12.52
+          }
+        ]
+      },
+      {
+        "date": "2022-09",
+        "totalAssets": 5765818,
+        "monthlyIncome": 99388,
+        "monthlyExpense": 39244,
+        "netWorth": 4900945,
+        "cash": 1729745,
+        "investment": 2594618,
+        "property": 1441455,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 10657,
+            "percentage": 13.02
+          },
+          {
+            "category": "交通",
+            "amount": 11555,
+            "percentage": 14.12
+          },
+          {
+            "category": "娛樂",
+            "amount": 13299,
+            "percentage": 16.25
+          },
+          {
+            "category": "購物",
+            "amount": 4693,
+            "percentage": 5.74
+          },
+          {
+            "category": "醫療",
+            "amount": 14690,
+            "percentage": 17.95
+          },
+          {
+            "category": "教育",
+            "amount": 16368,
+            "percentage": 20
+          },
+          {
+            "category": "其他",
+            "amount": 10563,
+            "percentage": 12.91
+          }
+        ]
+      },
+      {
+        "date": "2022-10",
+        "totalAssets": 5850804,
+        "monthlyIncome": 103609,
+        "monthlyExpense": 45085,
+        "netWorth": 4973183,
+        "cash": 1755241,
+        "investment": 2632862,
+        "property": 1462701,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 10547,
+            "percentage": 19.06
+          },
+          {
+            "category": "交通",
+            "amount": 4036,
+            "percentage": 7.29
+          },
+          {
+            "category": "娛樂",
+            "amount": 13424,
+            "percentage": 24.26
+          },
+          {
+            "category": "購物",
+            "amount": 10881,
+            "percentage": 19.67
+          },
+          {
+            "category": "醫療",
+            "amount": 9216,
+            "percentage": 16.66
+          },
+          {
+            "category": "教育",
+            "amount": 2776,
+            "percentage": 5.02
+          },
+          {
+            "category": "其他",
+            "amount": 4447,
+            "percentage": 8.04
+          }
+        ]
+      },
+      {
+        "date": "2022-11",
+        "totalAssets": 5842105,
+        "monthlyIncome": 89747,
+        "monthlyExpense": 37079,
+        "netWorth": 4965789,
+        "cash": 1752632,
+        "investment": 2628947,
+        "property": 1460526,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 7309,
+            "percentage": 9.97
+          },
+          {
+            "category": "交通",
+            "amount": 16839,
+            "percentage": 22.98
+          },
+          {
+            "category": "娛樂",
+            "amount": 4811,
+            "percentage": 6.56
+          },
+          {
+            "category": "購物",
+            "amount": 13100,
+            "percentage": 17.87
+          },
+          {
+            "category": "醫療",
+            "amount": 8180,
+            "percentage": 11.16
+          },
+          {
+            "category": "教育",
+            "amount": 6551,
+            "percentage": 8.94
+          },
+          {
+            "category": "其他",
+            "amount": 16497,
+            "percentage": 22.51
+          }
+        ]
+      },
+      {
+        "date": "2022-12",
+        "totalAssets": 5863313,
+        "monthlyIncome": 91044,
+        "monthlyExpense": 41571,
+        "netWorth": 4983816,
+        "cash": 1758994,
+        "investment": 2638491,
+        "property": 1465828,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 16073,
+            "percentage": 31.29
+          },
+          {
+            "category": "交通",
+            "amount": 4647,
+            "percentage": 9.05
+          },
+          {
+            "category": "娛樂",
+            "amount": 6146,
+            "percentage": 11.96
+          },
+          {
+            "category": "購物",
+            "amount": 6145,
+            "percentage": 11.96
+          },
+          {
+            "category": "醫療",
+            "amount": 3150,
+            "percentage": 6.13
+          },
+          {
+            "category": "教育",
+            "amount": 6140,
+            "percentage": 11.95
+          },
+          {
+            "category": "其他",
+            "amount": 9074,
+            "percentage": 17.66
+          }
+        ]
+      },
+      {
+        "date": "2023-01",
+        "totalAssets": 5921946,
+        "monthlyIncome": 83651,
+        "monthlyExpense": 38321,
+        "netWorth": 5033654,
+        "cash": 1776584,
+        "investment": 2664876,
+        "property": 1480487,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 12983,
+            "percentage": 22.27
+          },
+          {
+            "category": "交通",
+            "amount": 5143,
+            "percentage": 8.82
+          },
+          {
+            "category": "娛樂",
+            "amount": 13850,
+            "percentage": 23.76
+          },
+          {
+            "category": "購物",
+            "amount": 4680,
+            "percentage": 8.03
+          },
+          {
+            "category": "醫療",
+            "amount": 12231,
+            "percentage": 20.98
+          },
+          {
+            "category": "教育",
+            "amount": 3344,
+            "percentage": 5.74
+          },
+          {
+            "category": "其他",
+            "amount": 6058,
+            "percentage": 10.39
+          }
+        ]
+      },
+      {
+        "date": "2023-02",
+        "totalAssets": 6150267,
+        "monthlyIncome": 87393,
+        "monthlyExpense": 52178,
+        "netWorth": 5227727,
+        "cash": 1845080,
+        "investment": 2767620,
+        "property": 1537567,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 12209,
+            "percentage": 19.15
+          },
+          {
+            "category": "交通",
+            "amount": 16859,
+            "percentage": 26.44
+          },
+          {
+            "category": "娛樂",
+            "amount": 5480,
+            "percentage": 8.59
+          },
+          {
+            "category": "購物",
+            "amount": 12556,
+            "percentage": 19.69
+          },
+          {
+            "category": "醫療",
+            "amount": 2723,
+            "percentage": 4.27
+          },
+          {
+            "category": "教育",
+            "amount": 5776,
+            "percentage": 9.06
+          },
+          {
+            "category": "其他",
+            "amount": 8156,
+            "percentage": 12.79
+          }
+        ]
+      },
+      {
+        "date": "2023-03",
+        "totalAssets": 6237232,
+        "monthlyIncome": 100289,
+        "monthlyExpense": 35576,
+        "netWorth": 5301647,
+        "cash": 1871170,
+        "investment": 2806754,
+        "property": 1559308,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 14301,
+            "percentage": 24.01
+          },
+          {
+            "category": "交通",
+            "amount": 14232,
+            "percentage": 23.89
+          },
+          {
+            "category": "娛樂",
+            "amount": 2220,
+            "percentage": 3.73
+          },
+          {
+            "category": "購物",
+            "amount": 10282,
+            "percentage": 17.26
+          },
+          {
+            "category": "醫療",
+            "amount": 13367,
+            "percentage": 22.44
+          },
+          {
+            "category": "教育",
+            "amount": 2582,
+            "percentage": 4.33
+          },
+          {
+            "category": "其他",
+            "amount": 2589,
+            "percentage": 4.35
+          }
+        ]
+      },
+      {
+        "date": "2023-04",
+        "totalAssets": 6364726,
+        "monthlyIncome": 91734,
+        "monthlyExpense": 37496,
+        "netWorth": 5410017,
+        "cash": 1909418,
+        "investment": 2864127,
+        "property": 1591182,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 4025,
+            "percentage": 6.8
+          },
+          {
+            "category": "交通",
+            "amount": 2209,
+            "percentage": 3.73
+          },
+          {
+            "category": "娛樂",
+            "amount": 2551,
+            "percentage": 4.31
+          },
+          {
+            "category": "購物",
+            "amount": 11024,
+            "percentage": 18.64
+          },
+          {
+            "category": "醫療",
+            "amount": 12623,
+            "percentage": 21.34
+          },
+          {
+            "category": "教育",
+            "amount": 10221,
+            "percentage": 17.28
+          },
+          {
+            "category": "其他",
+            "amount": 16495,
+            "percentage": 27.89
+          }
+        ]
+      },
+      {
+        "date": "2023-05",
+        "totalAssets": 6266521,
+        "monthlyIncome": 95827,
+        "monthlyExpense": 57803,
+        "netWorth": 5326543,
+        "cash": 1879956,
+        "investment": 2819934,
+        "property": 1566630,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 6244,
+            "percentage": 10.06
+          },
+          {
+            "category": "交通",
+            "amount": 3408,
+            "percentage": 5.49
+          },
+          {
+            "category": "娛樂",
+            "amount": 4925,
+            "percentage": 7.93
+          },
+          {
+            "category": "購物",
+            "amount": 16086,
+            "percentage": 25.91
+          },
+          {
+            "category": "醫療",
+            "amount": 13714,
+            "percentage": 22.09
+          },
+          {
+            "category": "教育",
+            "amount": 6921,
+            "percentage": 11.15
+          },
+          {
+            "category": "其他",
+            "amount": 10789,
+            "percentage": 17.38
+          }
+        ]
+      },
+      {
+        "date": "2023-06",
+        "totalAssets": 6495065,
+        "monthlyIncome": 103481,
+        "monthlyExpense": 38427,
+        "netWorth": 5520805,
+        "cash": 1948520,
+        "investment": 2922779,
+        "property": 1623766,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 9490,
+            "percentage": 12.73
+          },
+          {
+            "category": "交通",
+            "amount": 9053,
+            "percentage": 12.15
+          },
+          {
+            "category": "娛樂",
+            "amount": 14938,
+            "percentage": 20.05
+          },
+          {
+            "category": "購物",
+            "amount": 9412,
+            "percentage": 12.63
+          },
+          {
+            "category": "醫療",
+            "amount": 13561,
+            "percentage": 18.2
+          },
+          {
+            "category": "教育",
+            "amount": 5538,
+            "percentage": 7.43
+          },
+          {
+            "category": "其他",
+            "amount": 12530,
+            "percentage": 16.81
+          }
+        ]
+      },
+      {
+        "date": "2023-07",
+        "totalAssets": 6483541,
+        "monthlyIncome": 90103,
+        "monthlyExpense": 48115,
+        "netWorth": 5511010,
+        "cash": 1945062,
+        "investment": 2917593,
+        "property": 1620885,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 8817,
+            "percentage": 11.02
+          },
+          {
+            "category": "交通",
+            "amount": 15626,
+            "percentage": 19.52
+          },
+          {
+            "category": "娛樂",
+            "amount": 15918,
+            "percentage": 19.89
+          },
+          {
+            "category": "購物",
+            "amount": 7964,
+            "percentage": 9.95
+          },
+          {
+            "category": "醫療",
+            "amount": 10889,
+            "percentage": 13.61
+          },
+          {
+            "category": "教育",
+            "amount": 14348,
+            "percentage": 17.93
+          },
+          {
+            "category": "其他",
+            "amount": 6469,
+            "percentage": 8.08
+          }
+        ]
+      },
+      {
+        "date": "2023-08",
+        "totalAssets": 6660964,
+        "monthlyIncome": 86393,
+        "monthlyExpense": 52535,
+        "netWorth": 5661819,
+        "cash": 1998289,
+        "investment": 2997434,
+        "property": 1665241,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 13330,
+            "percentage": 16.6
+          },
+          {
+            "category": "交通",
+            "amount": 16647,
+            "percentage": 20.73
+          },
+          {
+            "category": "娛樂",
+            "amount": 10719,
+            "percentage": 13.35
+          },
+          {
+            "category": "購物",
+            "amount": 8065,
+            "percentage": 10.04
+          },
+          {
+            "category": "醫療",
+            "amount": 7654,
+            "percentage": 9.53
+          },
+          {
+            "category": "教育",
+            "amount": 8548,
+            "percentage": 10.64
+          },
+          {
+            "category": "其他",
+            "amount": 15350,
+            "percentage": 19.11
+          }
+        ]
+      },
+      {
+        "date": "2023-09",
+        "totalAssets": 6686296,
+        "monthlyIncome": 94438,
+        "monthlyExpense": 49551,
+        "netWorth": 5683352,
+        "cash": 2005889,
+        "investment": 3008833,
+        "property": 1671574,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 5263,
+            "percentage": 8.16
+          },
+          {
+            "category": "交通",
+            "amount": 14829,
+            "percentage": 23
+          },
+          {
+            "category": "娛樂",
+            "amount": 10299,
+            "percentage": 15.98
+          },
+          {
+            "category": "購物",
+            "amount": 15430,
+            "percentage": 23.93
+          },
+          {
+            "category": "醫療",
+            "amount": 6002,
+            "percentage": 9.31
+          },
+          {
+            "category": "教育",
+            "amount": 5467,
+            "percentage": 8.48
+          },
+          {
+            "category": "其他",
+            "amount": 7178,
+            "percentage": 11.13
+          }
+        ]
+      },
+      {
+        "date": "2023-10",
+        "totalAssets": 6769268,
+        "monthlyIncome": 81604,
+        "monthlyExpense": 56213,
+        "netWorth": 5753878,
+        "cash": 2030780,
+        "investment": 3046171,
+        "property": 1692317,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 13147,
+            "percentage": 16.56
+          },
+          {
+            "category": "交通",
+            "amount": 10940,
+            "percentage": 13.78
+          },
+          {
+            "category": "娛樂",
+            "amount": 9335,
+            "percentage": 11.76
+          },
+          {
+            "category": "購物",
+            "amount": 12994,
+            "percentage": 16.37
+          },
+          {
+            "category": "醫療",
+            "amount": 11992,
+            "percentage": 15.11
+          },
+          {
+            "category": "教育",
+            "amount": 10404,
+            "percentage": 13.11
+          },
+          {
+            "category": "其他",
+            "amount": 10559,
+            "percentage": 13.3
+          }
+        ]
+      },
+      {
+        "date": "2023-11",
+        "totalAssets": 6892593,
+        "monthlyIncome": 108302,
+        "monthlyExpense": 52997,
+        "netWorth": 5858704,
+        "cash": 2067778,
+        "investment": 3101667,
+        "property": 1723148,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 9011,
+            "percentage": 13.4
+          },
+          {
+            "category": "交通",
+            "amount": 14398,
+            "percentage": 21.41
+          },
+          {
+            "category": "娛樂",
+            "amount": 10639,
+            "percentage": 15.82
+          },
+          {
+            "category": "購物",
+            "amount": 3909,
+            "percentage": 5.81
+          },
+          {
+            "category": "醫療",
+            "amount": 5584,
+            "percentage": 8.3
+          },
+          {
+            "category": "教育",
+            "amount": 10504,
+            "percentage": 15.62
+          },
+          {
+            "category": "其他",
+            "amount": 13214,
+            "percentage": 19.65
+          }
+        ]
+      },
+      {
+        "date": "2023-12",
+        "totalAssets": 6878759,
+        "monthlyIncome": 81255,
+        "monthlyExpense": 47582,
+        "netWorth": 5846945,
+        "cash": 2063628,
+        "investment": 3095442,
+        "property": 1719690,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 8243,
+            "percentage": 11.44
+          },
+          {
+            "category": "交通",
+            "amount": 7671,
+            "percentage": 10.64
+          },
+          {
+            "category": "娛樂",
+            "amount": 7315,
+            "percentage": 10.15
+          },
+          {
+            "category": "購物",
+            "amount": 13909,
+            "percentage": 19.3
+          },
+          {
+            "category": "醫療",
+            "amount": 6490,
+            "percentage": 9.01
+          },
+          {
+            "category": "教育",
+            "amount": 12206,
+            "percentage": 16.94
+          },
+          {
+            "category": "其他",
+            "amount": 16237,
+            "percentage": 22.53
+          }
+        ]
+      },
+      {
+        "date": "2024-01",
+        "totalAssets": 7007466,
+        "monthlyIncome": 89073,
+        "monthlyExpense": 52354,
+        "netWorth": 5956346,
+        "cash": 2102240,
+        "investment": 3153360,
+        "property": 1751867,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 12784,
+            "percentage": 17.16
+          },
+          {
+            "category": "交通",
+            "amount": 10029,
+            "percentage": 13.46
+          },
+          {
+            "category": "娛樂",
+            "amount": 9223,
+            "percentage": 12.38
+          },
+          {
+            "category": "購物",
+            "amount": 13927,
+            "percentage": 18.69
+          },
+          {
+            "category": "醫療",
+            "amount": 11923,
+            "percentage": 16
+          },
+          {
+            "category": "教育",
+            "amount": 6027,
+            "percentage": 8.09
+          },
+          {
+            "category": "其他",
+            "amount": 10595,
+            "percentage": 14.22
+          }
+        ]
+      },
+      {
+        "date": "2024-02",
+        "totalAssets": 7110181,
+        "monthlyIncome": 93502,
+        "monthlyExpense": 55746,
+        "netWorth": 6043654,
+        "cash": 2133054,
+        "investment": 3199581,
+        "property": 1777545,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 7859,
+            "percentage": 9.24
+          },
+          {
+            "category": "交通",
+            "amount": 6750,
+            "percentage": 7.94
+          },
+          {
+            "category": "娛樂",
+            "amount": 14867,
+            "percentage": 17.48
+          },
+          {
+            "category": "購物",
+            "amount": 12100,
+            "percentage": 14.23
+          },
+          {
+            "category": "醫療",
+            "amount": 12447,
+            "percentage": 14.64
+          },
+          {
+            "category": "教育",
+            "amount": 14076,
+            "percentage": 16.55
+          },
+          {
+            "category": "其他",
+            "amount": 16930,
+            "percentage": 19.91
+          }
+        ]
+      },
+      {
+        "date": "2024-03",
+        "totalAssets": 7121992,
+        "monthlyIncome": 96246,
+        "monthlyExpense": 35842,
+        "netWorth": 6053693,
+        "cash": 2136598,
+        "investment": 3204896,
+        "property": 1780498,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 6003,
+            "percentage": 8.42
+          },
+          {
+            "category": "交通",
+            "amount": 13776,
+            "percentage": 19.32
+          },
+          {
+            "category": "娛樂",
+            "amount": 10199,
+            "percentage": 14.3
+          },
+          {
+            "category": "購物",
+            "amount": 14524,
+            "percentage": 20.37
+          },
+          {
+            "category": "醫療",
+            "amount": 6778,
+            "percentage": 9.51
+          },
+          {
+            "category": "教育",
+            "amount": 4376,
+            "percentage": 6.14
+          },
+          {
+            "category": "其他",
+            "amount": 15646,
+            "percentage": 21.94
+          }
+        ]
+      },
+      {
+        "date": "2024-04",
+        "totalAssets": 7387577,
+        "monthlyIncome": 105224,
+        "monthlyExpense": 42142,
+        "netWorth": 6279440,
+        "cash": 2216273,
+        "investment": 3324410,
+        "property": 1846894,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 11559,
+            "percentage": 25.43
+          },
+          {
+            "category": "交通",
+            "amount": 2365,
+            "percentage": 5.2
+          },
+          {
+            "category": "娛樂",
+            "amount": 7630,
+            "percentage": 16.79
+          },
+          {
+            "category": "購物",
+            "amount": 3736,
+            "percentage": 8.22
+          },
+          {
+            "category": "醫療",
+            "amount": 2184,
+            "percentage": 4.81
+          },
+          {
+            "category": "教育",
+            "amount": 8719,
+            "percentage": 19.18
+          },
+          {
+            "category": "其他",
+            "amount": 9255,
+            "percentage": 20.36
+          }
+        ]
+      },
+      {
+        "date": "2024-05",
+        "totalAssets": 7296295,
+        "monthlyIncome": 82156,
+        "monthlyExpense": 56055,
+        "netWorth": 6201851,
+        "cash": 2188889,
+        "investment": 3283333,
+        "property": 1824074,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 5634,
+            "percentage": 9.03
+          },
+          {
+            "category": "交通",
+            "amount": 3267,
+            "percentage": 5.24
+          },
+          {
+            "category": "娛樂",
+            "amount": 9943,
+            "percentage": 15.94
+          },
+          {
+            "category": "購物",
+            "amount": 10662,
+            "percentage": 17.09
+          },
+          {
+            "category": "醫療",
+            "amount": 5776,
+            "percentage": 9.26
+          },
+          {
+            "category": "教育",
+            "amount": 12734,
+            "percentage": 20.41
+          },
+          {
+            "category": "其他",
+            "amount": 14360,
+            "percentage": 23.02
+          }
+        ]
+      },
+      {
+        "date": "2024-06",
+        "totalAssets": 7410297,
+        "monthlyIncome": 103055,
+        "monthlyExpense": 59800,
+        "netWorth": 6298752,
+        "cash": 2223089,
+        "investment": 3334634,
+        "property": 1852574,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 5465,
+            "percentage": 8.94
+          },
+          {
+            "category": "交通",
+            "amount": 2144,
+            "percentage": 3.51
+          },
+          {
+            "category": "娛樂",
+            "amount": 16375,
+            "percentage": 26.79
+          },
+          {
+            "category": "購物",
+            "amount": 4946,
+            "percentage": 8.09
+          },
+          {
+            "category": "醫療",
+            "amount": 16834,
+            "percentage": 27.54
+          },
+          {
+            "category": "教育",
+            "amount": 2138,
+            "percentage": 3.5
+          },
+          {
+            "category": "其他",
+            "amount": 13222,
+            "percentage": 21.63
+          }
+        ]
+      },
+      {
+        "date": "2024-07",
+        "totalAssets": 7505810,
+        "monthlyIncome": 106014,
+        "monthlyExpense": 49064,
+        "netWorth": 6379938,
+        "cash": 2251743,
+        "investment": 3377615,
+        "property": 1876453,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 14206,
+            "percentage": 30.72
+          },
+          {
+            "category": "交通",
+            "amount": 6930,
+            "percentage": 14.99
+          },
+          {
+            "category": "娛樂",
+            "amount": 4532,
+            "percentage": 9.8
+          },
+          {
+            "category": "購物",
+            "amount": 8309,
+            "percentage": 17.97
+          },
+          {
+            "category": "醫療",
+            "amount": 6786,
+            "percentage": 14.67
+          },
+          {
+            "category": "教育",
+            "amount": 3101,
+            "percentage": 6.71
+          },
+          {
+            "category": "其他",
+            "amount": 2380,
+            "percentage": 5.15
+          }
+        ]
+      },
+      {
+        "date": "2024-08",
+        "totalAssets": 7713827,
+        "monthlyIncome": 105043,
+        "monthlyExpense": 39115,
+        "netWorth": 6556753,
+        "cash": 2314148,
+        "investment": 3471222,
+        "property": 1928457,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 11443,
+            "percentage": 18.56
+          },
+          {
+            "category": "交通",
+            "amount": 3612,
+            "percentage": 5.86
+          },
+          {
+            "category": "娛樂",
+            "amount": 4163,
+            "percentage": 6.75
+          },
+          {
+            "category": "購物",
+            "amount": 11462,
+            "percentage": 18.6
+          },
+          {
+            "category": "醫療",
+            "amount": 9455,
+            "percentage": 15.34
+          },
+          {
+            "category": "教育",
+            "amount": 5390,
+            "percentage": 8.74
+          },
+          {
+            "category": "其他",
+            "amount": 16113,
+            "percentage": 26.14
+          }
+        ]
+      },
+      {
+        "date": "2024-09",
+        "totalAssets": 7641159,
+        "monthlyIncome": 101058,
+        "monthlyExpense": 40379,
+        "netWorth": 6494985,
+        "cash": 2292348,
+        "investment": 3438522,
+        "property": 1910290,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 4181,
+            "percentage": 8.43
+          },
+          {
+            "category": "交通",
+            "amount": 3452,
+            "percentage": 6.96
+          },
+          {
+            "category": "娛樂",
+            "amount": 9389,
+            "percentage": 18.93
+          },
+          {
+            "category": "購物",
+            "amount": 11419,
+            "percentage": 23.03
+          },
+          {
+            "category": "醫療",
+            "amount": 6462,
+            "percentage": 13.03
+          },
+          {
+            "category": "教育",
+            "amount": 6931,
+            "percentage": 13.98
+          },
+          {
+            "category": "其他",
+            "amount": 7755,
+            "percentage": 15.64
+          }
+        ]
+      },
+      {
+        "date": "2024-10",
+        "totalAssets": 7794631,
+        "monthlyIncome": 107494,
+        "monthlyExpense": 36332,
+        "netWorth": 6625436,
+        "cash": 2338389,
+        "investment": 3507584,
+        "property": 1948658,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 3103,
+            "percentage": 7.67
+          },
+          {
+            "category": "交通",
+            "amount": 2641,
+            "percentage": 6.53
+          },
+          {
+            "category": "娛樂",
+            "amount": 10565,
+            "percentage": 26.12
+          },
+          {
+            "category": "購物",
+            "amount": 3560,
+            "percentage": 8.8
+          },
+          {
+            "category": "醫療",
+            "amount": 3930,
+            "percentage": 9.72
+          },
+          {
+            "category": "教育",
+            "amount": 10097,
+            "percentage": 24.96
+          },
+          {
+            "category": "其他",
+            "amount": 6553,
+            "percentage": 16.2
+          }
+        ]
+      },
+      {
+        "date": "2024-11",
+        "totalAssets": 7971048,
+        "monthlyIncome": 94527,
+        "monthlyExpense": 42837,
+        "netWorth": 6775391,
+        "cash": 2391314,
+        "investment": 3586972,
+        "property": 1992762,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 11210,
+            "percentage": 19.86
+          },
+          {
+            "category": "交通",
+            "amount": 5946,
+            "percentage": 10.53
+          },
+          {
+            "category": "娛樂",
+            "amount": 5096,
+            "percentage": 9.03
+          },
+          {
+            "category": "購物",
+            "amount": 12198,
+            "percentage": 21.61
+          },
+          {
+            "category": "醫療",
+            "amount": 9066,
+            "percentage": 16.06
+          },
+          {
+            "category": "教育",
+            "amount": 8783,
+            "percentage": 15.56
+          },
+          {
+            "category": "其他",
+            "amount": 4150,
+            "percentage": 7.35
+          }
+        ]
+      },
+      {
+        "date": "2024-12",
+        "totalAssets": 8011149,
+        "monthlyIncome": 87370,
+        "monthlyExpense": 45107,
+        "netWorth": 6809477,
+        "cash": 2403345,
+        "investment": 3605017,
+        "property": 2002787,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 12721,
+            "percentage": 22.58
+          },
+          {
+            "category": "交通",
+            "amount": 10168,
+            "percentage": 18.05
+          },
+          {
+            "category": "娛樂",
+            "amount": 10112,
+            "percentage": 17.95
+          },
+          {
+            "category": "購物",
+            "amount": 5285,
+            "percentage": 9.38
+          },
+          {
+            "category": "醫療",
+            "amount": 4669,
+            "percentage": 8.29
+          },
+          {
+            "category": "教育",
+            "amount": 9411,
+            "percentage": 16.7
+          },
+          {
+            "category": "其他",
+            "amount": 3976,
+            "percentage": 7.06
+          }
+        ]
+      },
+      {
+        "date": "2025-01",
+        "totalAssets": 8016760,
+        "monthlyIncome": 80343,
+        "monthlyExpense": 38938,
+        "netWorth": 6814246,
+        "cash": 2405028,
+        "investment": 3607542,
+        "property": 2004190,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 11390,
+            "percentage": 23.38
+          },
+          {
+            "category": "交通",
+            "amount": 3520,
+            "percentage": 7.22
+          },
+          {
+            "category": "娛樂",
+            "amount": 7380,
+            "percentage": 15.15
+          },
+          {
+            "category": "購物",
+            "amount": 8491,
+            "percentage": 17.43
+          },
+          {
+            "category": "醫療",
+            "amount": 2044,
+            "percentage": 4.2
+          },
+          {
+            "category": "教育",
+            "amount": 11154,
+            "percentage": 22.89
+          },
+          {
+            "category": "其他",
+            "amount": 4745,
+            "percentage": 9.74
+          }
+        ]
+      },
+      {
+        "date": "2025-02",
+        "totalAssets": 8216690,
+        "monthlyIncome": 98452,
+        "monthlyExpense": 57583,
+        "netWorth": 6984186,
+        "cash": 2465007,
+        "investment": 3697511,
+        "property": 2054173,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 6101,
+            "percentage": 9.57
+          },
+          {
+            "category": "交通",
+            "amount": 16137,
+            "percentage": 25.32
+          },
+          {
+            "category": "娛樂",
+            "amount": 14596,
+            "percentage": 22.9
+          },
+          {
+            "category": "購物",
+            "amount": 9180,
+            "percentage": 14.4
+          },
+          {
+            "category": "醫療",
+            "amount": 12314,
+            "percentage": 19.32
+          },
+          {
+            "category": "教育",
+            "amount": 2433,
+            "percentage": 3.82
+          },
+          {
+            "category": "其他",
+            "amount": 2967,
+            "percentage": 4.66
+          }
+        ]
+      },
+      {
+        "date": "2025-03",
+        "totalAssets": 8305711,
+        "monthlyIncome": 106910,
+        "monthlyExpense": 57550,
+        "netWorth": 7059854,
+        "cash": 2491713,
+        "investment": 3737570,
+        "property": 2076428,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 9216,
+            "percentage": 15.09
+          },
+          {
+            "category": "交通",
+            "amount": 16530,
+            "percentage": 27.06
+          },
+          {
+            "category": "娛樂",
+            "amount": 11440,
+            "percentage": 18.73
+          },
+          {
+            "category": "購物",
+            "amount": 8025,
+            "percentage": 13.14
+          },
+          {
+            "category": "醫療",
+            "amount": 6010,
+            "percentage": 9.84
+          },
+          {
+            "category": "教育",
+            "amount": 5666,
+            "percentage": 9.27
+          },
+          {
+            "category": "其他",
+            "amount": 4204,
+            "percentage": 6.88
+          }
+        ]
+      },
+      {
+        "date": "2025-04",
+        "totalAssets": 8221280,
+        "monthlyIncome": 83454,
+        "monthlyExpense": 39293,
+        "netWorth": 6988088,
+        "cash": 2466384,
+        "investment": 3699576,
+        "property": 2055320,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 4879,
+            "percentage": 6.78
+          },
+          {
+            "category": "交通",
+            "amount": 5961,
+            "percentage": 8.28
+          },
+          {
+            "category": "娛樂",
+            "amount": 8249,
+            "percentage": 11.46
+          },
+          {
+            "category": "購物",
+            "amount": 12763,
+            "percentage": 17.73
+          },
+          {
+            "category": "醫療",
+            "amount": 16138,
+            "percentage": 22.42
+          },
+          {
+            "category": "教育",
+            "amount": 9063,
+            "percentage": 12.59
+          },
+          {
+            "category": "其他",
+            "amount": 14933,
+            "percentage": 20.74
+          }
+        ]
+      },
+      {
+        "date": "2025-05",
+        "totalAssets": 8308138,
+        "monthlyIncome": 93723,
+        "monthlyExpense": 49747,
+        "netWorth": 7061917,
+        "cash": 2492441,
+        "investment": 3738662,
+        "property": 2077035,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 9785,
+            "percentage": 16.74
+          },
+          {
+            "category": "交通",
+            "amount": 3912,
+            "percentage": 6.69
+          },
+          {
+            "category": "娛樂",
+            "amount": 15635,
+            "percentage": 26.74
+          },
+          {
+            "category": "購物",
+            "amount": 3639,
+            "percentage": 6.22
+          },
+          {
+            "category": "醫療",
+            "amount": 2854,
+            "percentage": 4.88
+          },
+          {
+            "category": "教育",
+            "amount": 5970,
+            "percentage": 10.21
+          },
+          {
+            "category": "其他",
+            "amount": 16671,
+            "percentage": 28.51
+          }
+        ]
+      },
+      {
+        "date": "2025-06",
+        "totalAssets": 8538224,
+        "monthlyIncome": 87637,
+        "monthlyExpense": 38336,
+        "netWorth": 7257490,
+        "cash": 2561467,
+        "investment": 3842201,
+        "property": 2134556,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 10673,
+            "percentage": 15.8
+          },
+          {
+            "category": "交通",
+            "amount": 11819,
+            "percentage": 17.5
+          },
+          {
+            "category": "娛樂",
+            "amount": 8419,
+            "percentage": 12.47
+          },
+          {
+            "category": "購物",
+            "amount": 9700,
+            "percentage": 14.36
+          },
+          {
+            "category": "醫療",
+            "amount": 4396,
+            "percentage": 6.51
+          },
+          {
+            "category": "教育",
+            "amount": 7688,
+            "percentage": 11.38
+          },
+          {
+            "category": "其他",
+            "amount": 14835,
+            "percentage": 21.97
+          }
+        ]
+      },
+      {
+        "date": "2025-07",
+        "totalAssets": 8668360,
+        "monthlyIncome": 105697,
+        "monthlyExpense": 59311,
+        "netWorth": 7368106,
+        "cash": 2600508,
+        "investment": 3900762,
+        "property": 2167090,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 9774,
+            "percentage": 13.52
+          },
+          {
+            "category": "交通",
+            "amount": 8898,
+            "percentage": 12.31
+          },
+          {
+            "category": "娛樂",
+            "amount": 12385,
+            "percentage": 17.13
+          },
+          {
+            "category": "購物",
+            "amount": 14544,
+            "percentage": 20.12
+          },
+          {
+            "category": "醫療",
+            "amount": 12044,
+            "percentage": 16.66
+          },
+          {
+            "category": "教育",
+            "amount": 12225,
+            "percentage": 16.91
+          },
+          {
+            "category": "其他",
+            "amount": 2419,
+            "percentage": 3.35
+          }
+        ]
+      },
+      {
+        "date": "2025-08",
+        "totalAssets": 8623974,
+        "monthlyIncome": 83142,
+        "monthlyExpense": 52262,
+        "netWorth": 7330378,
+        "cash": 2587192,
+        "investment": 3880788,
+        "property": 2155994,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 16766,
+            "percentage": 20.44
+          },
+          {
+            "category": "交通",
+            "amount": 10809,
+            "percentage": 13.18
+          },
+          {
+            "category": "娛樂",
+            "amount": 11786,
+            "percentage": 14.37
+          },
+          {
+            "category": "購物",
+            "amount": 12302,
+            "percentage": 15
+          },
+          {
+            "category": "醫療",
+            "amount": 11582,
+            "percentage": 14.12
+          },
+          {
+            "category": "教育",
+            "amount": 13848,
+            "percentage": 16.88
+          },
+          {
+            "category": "其他",
+            "amount": 4935,
+            "percentage": 6.02
+          }
+        ]
+      },
+      {
+        "date": "2025-09",
+        "totalAssets": 8699751,
+        "monthlyIncome": 102945,
+        "monthlyExpense": 53683,
+        "netWorth": 7394788,
+        "cash": 2609925,
+        "investment": 3914888,
+        "property": 2174938,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 3252,
+            "percentage": 4.8
+          },
+          {
+            "category": "交通",
+            "amount": 16240,
+            "percentage": 23.98
+          },
+          {
+            "category": "娛樂",
+            "amount": 3046,
+            "percentage": 4.5
+          },
+          {
+            "category": "購物",
+            "amount": 15721,
+            "percentage": 23.21
+          },
+          {
+            "category": "醫療",
+            "amount": 15676,
+            "percentage": 23.15
+          },
+          {
+            "category": "教育",
+            "amount": 2707,
+            "percentage": 4
+          },
+          {
+            "category": "其他",
+            "amount": 11083,
+            "percentage": 16.36
+          }
+        ]
+      },
+      {
+        "date": "2025-10",
+        "totalAssets": 8858414,
+        "monthlyIncome": 106131,
+        "monthlyExpense": 45931,
+        "netWorth": 7529652,
+        "cash": 2657524,
+        "investment": 3986286,
+        "property": 2214604,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 5448,
+            "percentage": 10.02
+          },
+          {
+            "category": "交通",
+            "amount": 5131,
+            "percentage": 9.44
+          },
+          {
+            "category": "娛樂",
+            "amount": 7642,
+            "percentage": 14.05
+          },
+          {
+            "category": "購物",
+            "amount": 13374,
+            "percentage": 24.6
+          },
+          {
+            "category": "醫療",
+            "amount": 6672,
+            "percentage": 12.27
+          },
+          {
+            "category": "教育",
+            "amount": 13765,
+            "percentage": 25.32
+          },
+          {
+            "category": "其他",
+            "amount": 2342,
+            "percentage": 4.31
+          }
+        ]
+      },
+      {
+        "date": "2025-11",
+        "totalAssets": 8948564,
+        "monthlyIncome": 96249,
+        "monthlyExpense": 57965,
+        "netWorth": 7606279,
+        "cash": 2684569,
+        "investment": 4026854,
+        "property": 2237141,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 16464,
+            "percentage": 36.42
+          },
+          {
+            "category": "交通",
+            "amount": 5867,
+            "percentage": 12.98
+          },
+          {
+            "category": "娛樂",
+            "amount": 4806,
+            "percentage": 10.63
+          },
+          {
+            "category": "購物",
+            "amount": 3671,
+            "percentage": 8.12
+          },
+          {
+            "category": "醫療",
+            "amount": 2152,
+            "percentage": 4.76
+          },
+          {
+            "category": "教育",
+            "amount": 7504,
+            "percentage": 16.6
+          },
+          {
+            "category": "其他",
+            "amount": 4742,
+            "percentage": 10.49
+          }
+        ]
+      },
+      {
+        "date": "2025-12",
+        "totalAssets": 8950816,
+        "monthlyIncome": 104099,
+        "monthlyExpense": 44427,
+        "netWorth": 7608194,
+        "cash": 2685245,
+        "investment": 4027867,
+        "property": 2237704,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 11818,
+            "percentage": 16.41
+          },
+          {
+            "category": "交通",
+            "amount": 13045,
+            "percentage": 18.12
+          },
+          {
+            "category": "娛樂",
+            "amount": 3926,
+            "percentage": 5.45
+          },
+          {
+            "category": "購物",
+            "amount": 16753,
+            "percentage": 23.26
+          },
+          {
+            "category": "醫療",
+            "amount": 8444,
+            "percentage": 11.73
+          },
+          {
+            "category": "教育",
+            "amount": 5655,
+            "percentage": 7.85
+          },
+          {
+            "category": "其他",
+            "amount": 12369,
+            "percentage": 17.18
+          }
+        ]
+      },
+      {
+        "date": "2026-01",
+        "totalAssets": 9158793,
+        "monthlyIncome": 83691,
+        "monthlyExpense": 45013,
+        "netWorth": 7784974,
+        "cash": 2747638,
+        "investment": 4121457,
+        "property": 2289698,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 12111,
+            "percentage": 22.6
+          },
+          {
+            "category": "交通",
+            "amount": 4066,
+            "percentage": 7.59
+          },
+          {
+            "category": "娛樂",
+            "amount": 7125,
+            "percentage": 13.3
+          },
+          {
+            "category": "購物",
+            "amount": 10896,
+            "percentage": 20.33
+          },
+          {
+            "category": "醫療",
+            "amount": 5846,
+            "percentage": 10.91
+          },
+          {
+            "category": "教育",
+            "amount": 7111,
+            "percentage": 13.27
+          },
+          {
+            "category": "其他",
+            "amount": 6430,
+            "percentage": 12
+          }
+        ]
+      },
+      {
+        "date": "2026-02",
+        "totalAssets": 9233710,
+        "monthlyIncome": 99272,
+        "monthlyExpense": 54816,
+        "netWorth": 7848653,
+        "cash": 2770113,
+        "investment": 4155170,
+        "property": 2308428,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 6510,
+            "percentage": 7.83
+          },
+          {
+            "category": "交通",
+            "amount": 14500,
+            "percentage": 17.43
+          },
+          {
+            "category": "娛樂",
+            "amount": 11385,
+            "percentage": 13.69
+          },
+          {
+            "category": "購物",
+            "amount": 12666,
+            "percentage": 15.23
+          },
+          {
+            "category": "醫療",
+            "amount": 14833,
+            "percentage": 17.83
+          },
+          {
+            "category": "教育",
+            "amount": 12617,
+            "percentage": 15.17
+          },
+          {
+            "category": "其他",
+            "amount": 10668,
+            "percentage": 12.83
+          }
+        ]
+      },
+      {
+        "date": "2026-03",
+        "totalAssets": 9151146,
+        "monthlyIncome": 84368,
+        "monthlyExpense": 35026,
+        "netWorth": 7778474,
+        "cash": 2745344,
+        "investment": 4118016,
+        "property": 2287787,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 8379,
+            "percentage": 11.93
+          },
+          {
+            "category": "交通",
+            "amount": 9899,
+            "percentage": 14.09
+          },
+          {
+            "category": "娛樂",
+            "amount": 13704,
+            "percentage": 19.51
+          },
+          {
+            "category": "購物",
+            "amount": 13857,
+            "percentage": 19.72
+          },
+          {
+            "category": "醫療",
+            "amount": 5551,
+            "percentage": 7.9
+          },
+          {
+            "category": "教育",
+            "amount": 4115,
+            "percentage": 5.86
+          },
+          {
+            "category": "其他",
+            "amount": 14747,
+            "percentage": 20.99
+          }
+        ]
+      },
+      {
+        "date": "2026-04",
+        "totalAssets": 9307919,
+        "monthlyIncome": 96468,
+        "monthlyExpense": 48717,
+        "netWorth": 7911731,
+        "cash": 2792376,
+        "investment": 4188564,
+        "property": 2326980,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 10870,
+            "percentage": 17.56
+          },
+          {
+            "category": "交通",
+            "amount": 3712,
+            "percentage": 6
+          },
+          {
+            "category": "娛樂",
+            "amount": 11883,
+            "percentage": 19.19
+          },
+          {
+            "category": "購物",
+            "amount": 5219,
+            "percentage": 8.43
+          },
+          {
+            "category": "醫療",
+            "amount": 4695,
+            "percentage": 7.58
+          },
+          {
+            "category": "教育",
+            "amount": 16945,
+            "percentage": 27.37
+          },
+          {
+            "category": "其他",
+            "amount": 8584,
+            "percentage": 13.87
+          }
+        ]
+      },
+      {
+        "date": "2026-05",
+        "totalAssets": 9410216,
+        "monthlyIncome": 103815,
+        "monthlyExpense": 57189,
+        "netWorth": 7998684,
+        "cash": 2823065,
+        "investment": 4234597,
+        "property": 2352554,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 6423,
+            "percentage": 8.52
+          },
+          {
+            "category": "交通",
+            "amount": 15930,
+            "percentage": 21.14
+          },
+          {
+            "category": "娛樂",
+            "amount": 15994,
+            "percentage": 21.23
+          },
+          {
+            "category": "購物",
+            "amount": 9462,
+            "percentage": 12.56
+          },
+          {
+            "category": "醫療",
+            "amount": 13017,
+            "percentage": 17.28
+          },
+          {
+            "category": "教育",
+            "amount": 9903,
+            "percentage": 13.14
+          },
+          {
+            "category": "其他",
+            "amount": 4616,
+            "percentage": 6.13
+          }
+        ]
+      },
+      {
+        "date": "2026-06",
+        "totalAssets": 9406644,
+        "monthlyIncome": 89668,
+        "monthlyExpense": 57564,
+        "netWorth": 7995647,
+        "cash": 2821993,
+        "investment": 4232990,
+        "property": 2351661,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 10484,
+            "percentage": 15.31
+          },
+          {
+            "category": "交通",
+            "amount": 16317,
+            "percentage": 23.83
+          },
+          {
+            "category": "娛樂",
+            "amount": 11342,
+            "percentage": 16.56
+          },
+          {
+            "category": "購物",
+            "amount": 10683,
+            "percentage": 15.6
+          },
+          {
+            "category": "醫療",
+            "amount": 5329,
+            "percentage": 7.78
+          },
+          {
+            "category": "教育",
+            "amount": 2742,
+            "percentage": 4
+          },
+          {
+            "category": "其他",
+            "amount": 11573,
+            "percentage": 16.9
+          }
+        ]
+      },
+      {
+        "date": "2026-07",
+        "totalAssets": 9505834,
+        "monthlyIncome": 90755,
+        "monthlyExpense": 35504,
+        "netWorth": 8079959,
+        "cash": 2851750,
+        "investment": 4277625,
+        "property": 2376459,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 11516,
+            "percentage": 14.97
+          },
+          {
+            "category": "交通",
+            "amount": 11641,
+            "percentage": 15.13
+          },
+          {
+            "category": "娛樂",
+            "amount": 14574,
+            "percentage": 18.94
+          },
+          {
+            "category": "購物",
+            "amount": 3306,
+            "percentage": 4.3
+          },
+          {
+            "category": "醫療",
+            "amount": 13378,
+            "percentage": 17.39
+          },
+          {
+            "category": "教育",
+            "amount": 6696,
+            "percentage": 8.7
+          },
+          {
+            "category": "其他",
+            "amount": 15837,
+            "percentage": 20.58
+          }
+        ]
+      },
+      {
+        "date": "2026-08",
+        "totalAssets": 9724380,
+        "monthlyIncome": 88420,
+        "monthlyExpense": 35934,
+        "netWorth": 8265723,
+        "cash": 2917314,
+        "investment": 4375971,
+        "property": 2431095,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 6831,
+            "percentage": 13.08
+          },
+          {
+            "category": "交通",
+            "amount": 4695,
+            "percentage": 8.99
+          },
+          {
+            "category": "娛樂",
+            "amount": 14734,
+            "percentage": 28.21
+          },
+          {
+            "category": "購物",
+            "amount": 2217,
+            "percentage": 4.24
+          },
+          {
+            "category": "醫療",
+            "amount": 8528,
+            "percentage": 16.33
+          },
+          {
+            "category": "教育",
+            "amount": 9914,
+            "percentage": 18.98
+          },
+          {
+            "category": "其他",
+            "amount": 5317,
+            "percentage": 10.18
+          }
+        ]
+      },
+      {
+        "date": "2026-09",
+        "totalAssets": 9663484,
+        "monthlyIncome": 108157,
+        "monthlyExpense": 49955,
+        "netWorth": 8213961,
+        "cash": 2899045,
+        "investment": 4348568,
+        "property": 2415871,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 7221,
+            "percentage": 12.84
+          },
+          {
+            "category": "交通",
+            "amount": 10172,
+            "percentage": 18.09
+          },
+          {
+            "category": "娛樂",
+            "amount": 4707,
+            "percentage": 8.37
+          },
+          {
+            "category": "購物",
+            "amount": 9472,
+            "percentage": 16.84
+          },
+          {
+            "category": "醫療",
+            "amount": 7818,
+            "percentage": 13.9
+          },
+          {
+            "category": "教育",
+            "amount": 14483,
+            "percentage": 25.75
+          },
+          {
+            "category": "其他",
+            "amount": 2361,
+            "percentage": 4.2
+          }
+        ]
+      },
+      {
+        "date": "2026-10",
+        "totalAssets": 9828546,
+        "monthlyIncome": 81923,
+        "monthlyExpense": 58777,
+        "netWorth": 8354264,
+        "cash": 2948564,
+        "investment": 4422846,
+        "property": 2457137,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 6753,
+            "percentage": 10.61
+          },
+          {
+            "category": "交通",
+            "amount": 14891,
+            "percentage": 23.41
+          },
+          {
+            "category": "娛樂",
+            "amount": 4181,
+            "percentage": 6.57
+          },
+          {
+            "category": "購物",
+            "amount": 13189,
+            "percentage": 20.73
+          },
+          {
+            "category": "醫療",
+            "amount": 2167,
+            "percentage": 3.41
+          },
+          {
+            "category": "教育",
+            "amount": 8567,
+            "percentage": 13.47
+          },
+          {
+            "category": "其他",
+            "amount": 13873,
+            "percentage": 21.81
+          }
+        ]
+      },
+      {
+        "date": "2026-11",
+        "totalAssets": 9943346,
+        "monthlyIncome": 96761,
+        "monthlyExpense": 52967,
+        "netWorth": 8451844,
+        "cash": 2983004,
+        "investment": 4474506,
+        "property": 2485837,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 6764,
+            "percentage": 11.98
+          },
+          {
+            "category": "交通",
+            "amount": 7806,
+            "percentage": 13.82
+          },
+          {
+            "category": "娛樂",
+            "amount": 7416,
+            "percentage": 13.13
+          },
+          {
+            "category": "購物",
+            "amount": 6044,
+            "percentage": 10.7
+          },
+          {
+            "category": "醫療",
+            "amount": 12071,
+            "percentage": 21.37
+          },
+          {
+            "category": "教育",
+            "amount": 7670,
+            "percentage": 13.58
+          },
+          {
+            "category": "其他",
+            "amount": 8713,
+            "percentage": 15.43
+          }
+        ]
+      },
+      {
+        "date": "2026-12",
+        "totalAssets": 9955730,
+        "monthlyIncome": 89851,
+        "monthlyExpense": 43050,
+        "netWorth": 8462370,
+        "cash": 2986719,
+        "investment": 4480079,
+        "property": 2488933,
+        "expenseBreakdown": [
+          {
+            "category": "飲食",
+            "amount": 8768,
+            "percentage": 13.76
+          },
+          {
+            "category": "交通",
+            "amount": 5668,
+            "percentage": 8.89
+          },
+          {
+            "category": "娛樂",
+            "amount": 10094,
+            "percentage": 15.84
+          },
+          {
+            "category": "購物",
+            "amount": 16378,
+            "percentage": 25.7
+          },
+          {
+            "category": "醫療",
+            "amount": 2398,
+            "percentage": 3.76
+          },
+          {
+            "category": "教育",
+            "amount": 10264,
+            "percentage": 16.11
+          },
+          {
+            "category": "其他",
+            "amount": 10153,
+            "percentage": 15.93
+          }
+        ]
+      }
+    ]
+  }
+}
