@@ -5,6 +5,18 @@ on:
     branches:
       - main
       - master
+    paths:
+      - src/**
+      - public/**
+      - angular.json
+      - federation.config.js
+      - package.json
+      - package-lock.json
+      - tsconfig.app.json
+      - tsconfig.federation.json
+      - tsconfig.json
+      - tsconfig.spec.json
+      - .github/workflows/deploy-github-pages.yml
   workflow_dispatch:
 
 permissions:
