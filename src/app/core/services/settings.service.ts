@@ -23,7 +23,6 @@ const SETTINGS_CHANGED_EVENT = 'microfrontends:user-settings-changed';
 export class SettingsService {
   private readonly storageKey = 'user-settings';
   private readonly sourceId = Math.random().toString(36).slice(2);
-  private isApplyingExternalSettings = false;
   
   settings = signal<UserSettings>(this.loadSettings());
 
@@ -31,20 +30,10 @@ export class SettingsService {
     window.addEventListener('storage', this.handleStorageChange);
     window.addEventListener(SETTINGS_CHANGED_EVENT, this.handleSettingsChanged as EventListener);
     this.applyTheme(this.settings().theme);
-
-    effect(() => {
-      const currentSettings = this.settings();
-      localStorage.setItem(this.storageKey, JSON.stringify(currentSettings));
-      this.applyTheme(currentSettings.theme);
-
-      if (!this.isApplyingExternalSettings) {
-        this.broadcastSettings(currentSettings);
-      }
-    });
   }
 
   updateSettings(newSettings: Partial<UserSettings>) {
-    this.settings.update(current => ({ ...current, ...newSettings }));
+    this.applySettings({ ...this.settings(), ...newSettings }, true);
   }
 
   refreshSettings(): void {
@@ -110,19 +99,27 @@ export class SettingsService {
       return;
     }
 
+    this.applySettings(parsedSettings, false);
+  }
+
+  private applySettings(nextSettings: UserSettings, shouldBroadcast: boolean): void {
     const currentSettings = this.settings();
     const hasChanged =
-      currentSettings.theme !== parsedSettings.theme ||
-      currentSettings.defaultCurrency !== parsedSettings.defaultCurrency ||
-      currentSettings.notificationsEnabled !== parsedSettings.notificationsEnabled;
+      currentSettings.theme !== nextSettings.theme ||
+      currentSettings.defaultCurrency !== nextSettings.defaultCurrency ||
+      currentSettings.notificationsEnabled !== nextSettings.notificationsEnabled;
 
     if (!hasChanged) {
       return;
     }
 
-    this.isApplyingExternalSettings = true;
-    this.settings.set(parsedSettings);
-    this.isApplyingExternalSettings = false;
+    this.settings.set(nextSettings);
+    localStorage.setItem(this.storageKey, JSON.stringify(nextSettings));
+    this.applyTheme(nextSettings.theme);
+
+    if (shouldBroadcast) {
+      this.broadcastSettings(nextSettings);
+    }
   }
 
   private parseSettings(serializedSettings: string): UserSettings | null {
