@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, switchMap, of } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { ApiService, ApiResponse } from './api.service';
 
 export interface MonthlyTransaction {
@@ -12,9 +11,13 @@ export interface MonthlyTransaction {
 export interface AssetTrend {
   date: string;
   totalAssets: number;
+  monthlyIncome?: number;
+  monthlyExpense?: number;
+  netWorth?: number;
   cash: number;
   investment: number;
   property: number;
+  expenseBreakdown?: ExpenseCategory[];
 }
 
 export interface ExpenseCategory {
@@ -36,26 +39,16 @@ export interface DashboardData {
   providedIn: 'root'
 })
 export class DashboardService {
+  private readonly mockDashboardData = this.createMockDashboardData();
+  private readonly mockMonthlyTransactions = this.createMockMonthlyTransactions(this.mockDashboardData.assetTrends);
 
-  constructor(
-    private apiService: ApiService,
-    private http: HttpClient
-  ) { }
+  constructor(private apiService: ApiService) { }
 
   /**
-   * 取得 Dashboard 資料 (從 JSON 讀取)
+   * 取得 Dashboard 資料（固定使用假資料）
    */
   getDashboardData(): Observable<ApiResponse<DashboardData>> {
-    return this.http.get<ApiResponse<DashboardData>>('assets/mock/dashboard/data.json').pipe(
-      switchMap(apiResponse => {
-        // 直接返回 API 格式的回應（已包含 rtnCode, rtnMsg, data）
-        if (apiResponse.rtnCode === '000000' && apiResponse.data) {
-          return of(apiResponse);
-        } else {
-          return this.apiService.mockRequest<DashboardData>(false, undefined, 1000);
-        }
-      })
-    );
+    return this.apiService.mockRequest(true, this.mockDashboardData, 450);
   }
 
   /**
@@ -73,33 +66,68 @@ export class DashboardService {
       // 模擬資產增長
       const baseAsset = 2500000;
       const growth = i * 30000;
-      const fluctuation = Math.random() * 50000 - 25000;
+      const fluctuation = ((i % 4) - 1.5) * 12000;
       const totalAssets = baseAsset + growth + fluctuation;
+      const monthlyIncome = Math.round(90000 + i * 1200 + (i % 3) * 1800 - 1200);
+      const monthlyExpense = Math.round(42000 + i * 650 + (i % 4) * 900 - 1200);
+      const netWorth = Math.round(totalAssets * 0.73);
+      const expenseBreakdown = this.generateExpenseBreakdown(i);
 
       trends.push({
         date: `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`,
         totalAssets: Math.round(totalAssets),
+        monthlyIncome,
+        monthlyExpense,
+        netWorth,
         cash: Math.round(totalAssets * 0.3),
         investment: Math.round(totalAssets * 0.45),
-        property: Math.round(totalAssets * 0.25)
+        property: Math.round(totalAssets * 0.25),
+        expenseBreakdown
       });
     }
 
     return trends;
   }
 
+  private createMockDashboardData(): DashboardData {
+    const assetTrends = this.generateAssetTrends();
+    const latestTrend = assetTrends.at(-1);
+    const expenseBreakdown = latestTrend?.expenseBreakdown?.length
+      ? latestTrend.expenseBreakdown
+      : this.generateExpenseBreakdown();
+
+    return {
+      totalAssets: latestTrend?.totalAssets ?? 3150000,
+      monthlyIncome: latestTrend?.monthlyIncome ?? 96000,
+      monthlyExpense: latestTrend?.monthlyExpense ?? 46800,
+      netWorth: latestTrend?.netWorth ?? 2290000,
+      assetTrends,
+      expenseBreakdown
+    };
+  }
+
+  private createMockMonthlyTransactions(assetTrends: AssetTrend[]): MonthlyTransaction[] {
+    return assetTrends
+      .slice(-6)
+      .map(item => ({
+        month: item.date,
+        income: item.monthlyIncome ?? 0,
+        expense: item.monthlyExpense ?? 0
+      }));
+  }
+
   /**
    * 生成支出分類資料
    */
-  private generateExpenseBreakdown(): ExpenseCategory[] {
+  private generateExpenseBreakdown(seed: number = 0): ExpenseCategory[] {
     const categories = [
-      { category: '飲食', amount: 12500 },
-      { category: '交通', amount: 5500 },
-      { category: '娛樂', amount: 8000 },
-      { category: '購物', amount: 6500 },
-      { category: '醫療', amount: 3000 },
-      { category: '教育', amount: 4000 },
-      { category: '其他', amount: 3000 }
+      { category: '飲食', amount: 11800 + seed * 90 },
+      { category: '交通', amount: 5200 + seed * 45 },
+      { category: '娛樂', amount: 7600 + (seed % 3) * 320 },
+      { category: '購物', amount: 6100 + (seed % 4) * 270 },
+      { category: '醫療', amount: 2800 + (seed % 2) * 260 },
+      { category: '教育', amount: 3900 + seed * 30 },
+      { category: '其他', amount: 3200 + (seed % 5) * 180 }
     ];
 
     const total = categories.reduce((sum, cat) => sum + cat.amount, 0);
@@ -114,15 +142,6 @@ export class DashboardService {
    * 取得月度交易資料
    */
   getMonthlyTransactions(): Observable<ApiResponse<MonthlyTransaction[]>> {
-    const mockData: MonthlyTransaction[] = [
-      { month: '01月', income: 85000, expense: 42500 },
-      { month: '02月', income: 88000, expense: 45200 },
-      { month: '03月', income: 85000, expense: 41800 },
-      { month: '04月', income: 92000, expense: 48300 },
-      { month: '05月', income: 85000, expense: 43100 },
-      { month: '06月', income: 89000, expense: 46500 }
-    ];
-
-    return this.apiService.mockRequest(true, mockData, 600);
+    return this.apiService.mockRequest(true, this.mockMonthlyTransactions, 600);
   }
 }

@@ -1,0 +1,162 @@
+<section class="page-shell">
+  <div class="page-header">
+    <div>
+      <p class="eyebrow">Fake API Reconciliation</p>
+      <h1>交易對帳頁</h1>
+      <p class="subtitle">
+        這一頁直接走假 API 管線，組合查詢、分組、異常檢查與匯出 payload。
+      </p>
+    </div>
+    <div class="header-actions">
+      <a
+        mat-stroked-button
+        routerLink="/bookkeeping"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易列表</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/analytics"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >記帳分析</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/recurring"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >重複交易</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/review"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易審核</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/reconciliation"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易對帳</a
+      >
+    </div>
+  </div>
+
+  <input
+    #fileImport
+    class="visually-hidden"
+    type="file"
+    accept=".xlsx,.xls"
+    (change)="importWorkbook($event)"
+  />
+
+  @if (vm$ | async; as vm) {
+  <mat-card class="panel">
+    <h2>Excel 解析</h2>
+    <div class="header-actions">
+      <button mat-stroked-button type="button" (click)="fileImport.click()">
+        匯入工作簿
+      </button>
+      <button mat-flat-button type="button" (click)="exportWorkbook()">
+        匯出對帳簿
+      </button>
+    </div>
+    <p>{{ importMessage() }}</p>
+    @if (importSummary(); as imported) {
+    <div class="metric-row">
+      <span>工作表</span><strong>{{ imported.sheetNames.join(" / ") }}</strong>
+    </div>
+    <div class="metric-row">
+      <span>列數</span><strong>{{ imported.rowCount }}</strong>
+    </div>
+    <pre>{{ imported.previewRows | json }}</pre>
+    }
+  </mat-card>
+
+  <div class="card-grid">
+    <mat-card class="panel">
+      <h2>API 狀態</h2>
+      <div class="metric-row">
+        <span>來源</span><strong>{{ vm.meta.source }}</strong>
+      </div>
+      <div class="metric-row">
+        <span>延遲</span><strong>{{ vm.meta.latencyMs }} ms</strong>
+      </div>
+      <div class="metric-row">
+        <span>抓取時間</span
+        ><strong>{{ vm.meta.fetchedAt | date : "yyyy/MM/dd HH:mm:ss" }}</strong>
+      </div>
+    </mat-card>
+
+    <mat-card class="panel">
+      <h2>總額摘要</h2>
+      <div class="metric-row">
+        <span>收入</span
+        ><strong>{{
+          vm.totals.income | currency : "TWD" : "symbol" : "1.0-0"
+        }}</strong>
+      </div>
+      <div class="metric-row">
+        <span>支出</span
+        ><strong>{{
+          vm.totals.expense | currency : "TWD" : "symbol" : "1.0-0"
+        }}</strong>
+      </div>
+      <div class="metric-row">
+        <span>淨額</span
+        ><strong>{{
+          vm.totals.net | currency : "TWD" : "symbol" : "1.0-0"
+        }}</strong>
+      </div>
+    </mat-card>
+
+    <mat-card class="panel">
+      <h2>異常筆數</h2>
+      <div class="metric-row">
+        <span>待檢查</span><strong>{{ vm.anomalies.length }}</strong>
+      </div>
+      <div class="metric-row">
+        <span>回傳數</span><strong>{{ vm.meta.returnedCount }}</strong>
+      </div>
+      <div class="metric-row">
+        <span>總筆數</span><strong>{{ vm.meta.totalAvailable }}</strong>
+      </div>
+    </mat-card>
+  </div>
+
+  <div class="content-grid">
+    <mat-card class="panel">
+      <h2>分組結果</h2>
+      <ag-grid-angular
+        class="ag-theme-quartz finance-grid"
+        [rowData]="vm.groups"
+        [columnDefs]="groupColumnDefs"
+        [defaultColDef]="defaultColDef"
+        [animateRows]="true"
+        [pagination]="true"
+        [paginationPageSize]="8"
+      ></ag-grid-angular>
+    </mat-card>
+
+    <mat-card class="panel">
+      <h2>異常候選</h2>
+      <ag-grid-angular
+        class="ag-theme-quartz finance-grid"
+        [rowData]="vm.anomalies"
+        [columnDefs]="anomalyColumnDefs"
+        [defaultColDef]="defaultColDef"
+        [animateRows]="true"
+      ></ag-grid-angular>
+    </mat-card>
+  </div>
+
+  <mat-card class="panel">
+    <h2>匯出 Preview</h2>
+    <pre>{{ vm.exportDraft | json }}</pre>
+  </mat-card>
+  }
+</section>

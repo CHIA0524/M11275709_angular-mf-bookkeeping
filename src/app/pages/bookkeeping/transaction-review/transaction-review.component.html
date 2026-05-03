@@ -1,0 +1,113 @@
+<section class="page-shell">
+  <div class="page-header">
+    <div>
+      <p class="eyebrow">Monthly Review</p>
+      <h1>交易審核頁</h1>
+      <p class="subtitle">
+        把分析與規則候選拉到同一頁，形成 bookkeeping 的月結工作流。
+      </p>
+    </div>
+    <div class="header-actions">
+      <a
+        mat-stroked-button
+        routerLink="/bookkeeping"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易列表</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/analytics"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >記帳分析</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/recurring"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >重複交易</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/review"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易審核</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/reconciliation"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易對帳</a
+      >
+    </div>
+  </div>
+
+  <input
+    #fileImport
+    class="visually-hidden"
+    type="file"
+    accept=".xlsx,.xls"
+    (change)="importWorkbook($event)"
+  />
+
+  <mat-card class="panel">
+    <h2>Excel 工作簿</h2>
+    <div class="header-actions">
+      <button mat-stroked-button type="button" (click)="fileImport.click()">
+        匯入 Excel
+      </button>
+      <button mat-flat-button type="button" (click)="exportReviewWorkbook()">
+        匯出工作簿
+      </button>
+    </div>
+    <p>{{ importMessage() }}</p>
+    @if (importSummary(); as imported) {
+    <div class="metric-row">
+      <span>工作表</span><strong>{{ imported.sheetNames.join(" / ") }}</strong>
+    </div>
+    <div class="metric-row">
+      <span>預覽列數</span><strong>{{ imported.rowCount }}</strong>
+    </div>
+    <pre>{{ imported.previewRows | json }}</pre>
+    }
+  </mat-card>
+
+  @if (analytics$ | async; as analytics) {
+  <mat-card class="panel">
+    <h2>本月摘要</h2>
+    <div class="metric-row">
+      <span>收入</span
+      ><strong>{{
+        analytics.monthlyIncome | currency : "TWD" : "symbol" : "1.0-0"
+      }}</strong>
+    </div>
+    <div class="metric-row">
+      <span>支出</span
+      ><strong>{{
+        analytics.monthlyExpense | currency : "TWD" : "symbol" : "1.0-0"
+      }}</strong>
+    </div>
+    <div class="metric-row">
+      <span>重點類別</span><strong>{{ analytics.topExpenseCategory }}</strong>
+    </div>
+  </mat-card>
+  } @if (recurring$ | async; as recurring) {
+  <div class="review-grid">
+    @for (item of recurring; track item.category) {
+    <mat-card class="panel">
+      <h2>{{ item.category }}</h2>
+      <p>最近日期 {{ item.latestDate }}</p>
+      <p>次數 {{ item.occurrences }}</p>
+      <p>
+        平均金額
+        {{ item.averageAmount | currency : "TWD" : "symbol" : "1.0-0" }}
+      </p>
+    </mat-card>
+    }
+  </div>
+  }
+</section>

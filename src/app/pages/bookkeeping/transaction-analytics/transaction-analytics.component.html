@@ -1,0 +1,84 @@
+<section class="page-shell">
+  <div class="page-header">
+    <div>
+      <p class="eyebrow">Bookkeeping Intelligence</p>
+      <h1>記帳分析頁</h1>
+      <p class="subtitle">
+        用 date-fns、fuse.js 與 schema 解析讓 bookkeeping 變成資料分析模組。
+      </p>
+    </div>
+    <div class="header-actions">
+      <a
+        mat-stroked-button
+        routerLink="/bookkeeping"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易列表</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/analytics"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >記帳分析</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/recurring"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >重複交易</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/review"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易審核</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/reconciliation"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易對帳</a
+      >
+    </div>
+  </div>
+
+  @if (analytics$ | async; as analytics) {
+  <div class="card-grid">
+    <mat-card class="panel"
+      ><h2>本月收入</h2>
+      <strong>{{
+        analytics.monthlyIncome | currency : "TWD" : "symbol" : "1.0-0"
+      }}</strong></mat-card
+    >
+    <mat-card class="panel"
+      ><h2>本月支出</h2>
+      <strong>{{
+        analytics.monthlyExpense | currency : "TWD" : "symbol" : "1.0-0"
+      }}</strong></mat-card
+    >
+    <mat-card class="panel"
+      ><h2>最高支出類別</h2>
+      <strong>{{ analytics.topExpenseCategory }}</strong>
+      <p>{{ analytics.dateRangeLabel }}</p></mat-card
+    >
+  </div>
+
+  <mat-card class="panel">
+    <h2>模糊搜尋命中</h2>
+    <div class="match-list">
+      @for (item of analytics.topKeywordMatches; track item.id) {
+      <div class="match-row">
+        <span>{{ item.category }}</span
+        ><strong>{{
+          item.amount | currency : item.currency : "symbol" : "1.0-0"
+        }}</strong>
+      </div>
+      }
+    </div>
+  </mat-card>
+  }
+</section>

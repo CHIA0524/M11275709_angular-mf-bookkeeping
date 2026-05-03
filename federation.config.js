@@ -5,7 +5,7 @@ module.exports = withNativeFederation({
   name: 'bookkeeping',
 
   exposes: {
-    './TransactionList': './src/app/pages/transaction-list.component.ts',
+    './TransactionList': './src/app/pages/transaction-list/transaction-list.component.ts',
     './QuickAdd': './src/app/pages/quick-add/quick-add.component.ts',
   },
 

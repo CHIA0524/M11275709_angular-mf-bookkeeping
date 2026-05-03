@@ -1,0 +1,68 @@
+<section class="page-shell">
+  <div class="page-header">
+    <div>
+      <p class="eyebrow">Recurring Detection</p>
+      <h1>重複交易候選</h1>
+      <p class="subtitle">這一頁把交易資料往規則化管理延伸，不只是 CRUD。</p>
+    </div>
+    <div class="header-actions">
+      <a
+        mat-stroked-button
+        routerLink="/bookkeeping"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易列表</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/analytics"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >記帳分析</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/recurring"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >重複交易</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/review"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易審核</a
+      >
+      <a
+        mat-flat-button
+        routerLink="/bookkeeping/reconciliation"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >交易對帳</a
+      >
+    </div>
+  </div>
+
+  @if (candidates$ | async; as candidates) {
+  <div class="candidate-grid">
+    @for (item of candidates; track item.category) {
+    <mat-card class="panel">
+      <h2>{{ item.category }}</h2>
+      <div class="metric-row">
+        <span>平均金額</span
+        ><strong>{{
+          item.averageAmount | currency : "TWD" : "symbol" : "1.0-0"
+        }}</strong>
+      </div>
+      <div class="metric-row">
+        <span>出現次數</span><strong>{{ item.occurrences }}</strong>
+      </div>
+      <div class="metric-row">
+        <span>最近日期</span><strong>{{ item.latestDate }}</strong>
+      </div>
+    </mat-card>
+    }
+  </div>
+  }
+</section>

@@ -1,0 +1,63 @@
+<div class="filter-panel">
+  <mat-form-field appearance="outline">
+    <mat-label>關鍵字</mat-label>
+    <input matInput [(ngModel)]="keyword" (ngModelChange)="emitFilters()" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>類型</mat-label>
+    <mat-select [(ngModel)]="type" (selectionChange)="emitFilters()">
+      <mat-option value="all">全部</mat-option>
+      <mat-option value="income">收入</mat-option>
+      <mat-option value="expense">支出</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>幣別</mat-label>
+    <mat-select [(ngModel)]="currency" (selectionChange)="emitFilters()">
+      <mat-option value="all">全部</mat-option>
+      @for (code of currencies(); track code) {
+      <mat-option [value]="code">{{ code }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>最低金額</mat-label>
+    <input
+      matInput
+      type="number"
+      [(ngModel)]="minAmount"
+      (ngModelChange)="emitFilters()"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>排序欄位</mat-label>
+    <mat-select [(ngModel)]="sortBy" (selectionChange)="emitFilters()">
+      <mat-option value="date">日期</mat-option>
+      <mat-option value="amount">金額</mat-option>
+      <mat-option value="category">分類</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>排序方向</mat-label>
+    <mat-select [(ngModel)]="sortDirection" (selectionChange)="emitFilters()">
+      <mat-option value="desc">由大到小 / 由新到舊</mat-option>
+      <mat-option value="asc">由小到大 / 由舊到新</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>分組方式</mat-label>
+    <mat-select [(ngModel)]="groupBy" (selectionChange)="emitFilters()">
+      <mat-option value="category">分類</mat-option>
+      <mat-option value="currency">幣別</mat-option>
+      <mat-option value="month">月份</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-stroked-button type="button" (click)="reset()">清除條件</button>
+</div>

@@ -8,7 +8,7 @@ export interface Transaction {
   type: 'income' | 'expense';
   category: string;
   amount: number;
-  currency: string;
+  currency: string; // 新增幣別欄位
   date: string;
   notes?: string;
 }
@@ -25,21 +25,25 @@ export class TransactionService {
   }
 
   private loadInitialData(): void {
+    // 每次重新整理或進入應用程式時，先嘗試從 LocalStorage 讀取
     const storedTransactions = localStorage.getItem(this.storageKey);
     
     if (storedTransactions) {
       try {
         const parsed = JSON.parse(storedTransactions);
+        // 如果 LocalStorage 有資料且不為空，直接使用
         if (parsed.length > 0) {
           this.transactionsSubject.next(parsed);
           return;
         }
       } catch (error) {
         console.error('Error parsing stored transactions:', error);
+        // 如果解析失敗，清除無效資料並繼續載入 Mock
         localStorage.removeItem(this.storageKey);
       }
     }
 
+    // 如果 LocalStorage 沒資料或為空，則 Call API (讀取 Mock)
     this.loadMockData();
   }
 
@@ -54,6 +58,7 @@ export class TransactionService {
   }
 
   private saveToLocalStorage(transactions: Transaction[]): void {
+    // 確保存入時每筆交易都有 currency 欄位，若沒有則補上 'TWD'
     const transactionsWithCurrency = transactions.map(t => ({
       ...t,
       currency: t.currency || 'TWD'
@@ -63,6 +68,7 @@ export class TransactionService {
   }
 
   getTransactions(): Observable<Transaction[]> {
+    // 讀取時也做一次防呆，確保舊資料有 currency
     return this.transactionsSubject.asObservable().pipe(
       map(transactions => transactions.map(t => ({
         ...t,
@@ -81,10 +87,14 @@ export class TransactionService {
     const currentTransactions = this.transactionsSubject.getValue();
     const newTransaction: Transaction = {
       ...transaction,
-      id: new Date().getTime().toString()
+      id: new Date().getTime().toString() // Simple unique ID
     };
     const updatedTransactions = [...currentTransactions, newTransaction];
     this.saveToLocalStorage(updatedTransactions);
+  }
+
+  replaceTransactions(transactions: Transaction[]): void {
+    this.saveToLocalStorage(transactions);
   }
 
   updateTransaction(updatedTransaction: Transaction): void {
