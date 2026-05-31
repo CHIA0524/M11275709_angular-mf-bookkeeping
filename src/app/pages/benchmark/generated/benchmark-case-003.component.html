@@ -1,0 +1,70 @@
+<section class="benchmark-page">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Synthetic Benchmark</p>
+      <h1>{{ pageTitle }}</h1>
+      <p class="page-code">Scenario {{ pageCode }}</p>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span>Total Amount</span>
+        <strong>{{ totals.amount | number: '1.0-0' }}</strong>
+      </div>
+      <div>
+        <span>Total Weight</span>
+        <strong>{{ totals.weight | number: '1.0-0' }}</strong>
+      </div>
+    </div>
+  </header>
+
+  <section class="summary-grid">
+    <article class="summary-card" *ngFor="let card of summaryCards; let index = index; trackBy: trackByIndex">
+      <span class="summary-index">{{ index + 1 }}</span>
+      <h2>{{ card.label }}</h2>
+      <strong>{{ card.value | number: '1.0-0' }}</strong>
+      <p>Delta {{ formatDelta(card.delta) }} | Emphasis {{ card.emphasis }}</p>
+    </article>
+  </section>
+
+  <section class="matrix-grid">
+    <article class="group-card" *ngFor="let group of groups; let groupIndex = index; trackBy: trackByIndex">
+      <h3>{{ group.title }}</h3>
+      <ul>
+        <li *ngFor="let value of group.values; let valueIndex = index; trackBy: trackByIndex">
+          <span>Cell {{ groupIndex + 1 }}.{{ valueIndex + 1 }}</span>
+          <strong>{{ value }}</strong>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="narrative-grid">
+    <article class="narrative-card" *ngFor="let block of narrative; trackBy: trackByIndex">
+      <h3>{{ block.title }}</h3>
+      <p>{{ block.body }}</p>
+    </article>
+  </section>
+
+  <section class="table-shell">
+    <table>
+      <thead>
+        <tr>
+          <th>Label</th>
+          <th>Amount</th>
+          <th>Ratio</th>
+          <th>Variance</th>
+          <th>Weight</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of dataRows; trackBy: trackByIndex">
+          <td>{{ row.label }}</td>
+          <td>{{ row.amount | number: '1.0-0' }}</td>
+          <td>{{ row.ratio | percent: '1.0-0' }}</td>
+          <td>{{ formatDelta(row.variance) }}</td>
+          <td>{{ row.weight }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>

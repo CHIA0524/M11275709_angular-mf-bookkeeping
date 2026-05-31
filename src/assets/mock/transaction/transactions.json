@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "type": "income",
+    "category": "薪資",
+    "currency": "TWD",
+    "amount": 50000,
+    "date": "2023-01-05",
+    "notes": "每月薪資"
+  },
+  {
+    "id": "2",
+    "type": "expense",
+    "category": "飲食",
+    "currency": "TWD",
+    "amount": 150,
+    "date": "2023-01-06",
+    "notes": "午餐"
+  },
+  {
+    "id": "3",
+    "type": "expense",
+    "category": "交通",
+    "currency": "TWD",
+    "amount": 50,
+    "date": "2023-01-06",
+    "notes": "捷運"
+  },
+  {
+    "id": "4",
+    "type": "expense",
+    "category": "娛樂",
+    "currency": "TWD",
+    "amount": 800,
+    "date": "2023-01-07",
+    "notes": "電影票與爆米花"
+  },
+  {
+    "id": "5",
+    "type": "income",
+    "category": "獎金",
+    "currency": "TWD",
+    "amount": 10000,
+    "date": "2023-01-10",
+    "notes": "年終獎金"
+  },
+  {
+    "id": "6",
+    "type": "expense",
+    "category": "購物",
+    "currency": "TWD",
+    "amount": 3000,
+    "date": "2023-01-15",
+    "notes": "新衣服"
+  },
+  {
+    "id": "7",
+    "type": "expense",
+    "category": "醫療",
+    "currency": "TWD",
+    "amount": 500,
+    "date": "2023-01-20",
+    "notes": "感冒藥"
+  },
+  {
+    "id": "8",
+    "type": "expense",
+    "category": "教育",
+    "currency": "TWD",
+    "amount": 2500,
+    "date": "2023-01-25",
+    "notes": "線上課程"
+  },
+  {
+    "id": "9",
+    "type": "income",
+    "category": "投資收益",
+    "currency": "TWD",
+    "amount": 1500,
+    "date": "2023-01-30",
+    "notes": "股票配息"
+  },
+  {
+    "id": "10",
+    "type": "expense",
+    "category": "飲食",
+    "currency": "TWD",
+    "amount": 200,
+    "date": "2023-01-31",
+    "notes": "晚餐聚會"
+  }
+]

@@ -1,0 +1,78 @@
+<div class="filter-panel">
+  <mat-form-field appearance="outline">
+    <mat-label>{{ "關鍵字" | t }}</mat-label>
+    <input
+      matInput
+      [value]="keyword"
+      (input)="updateKeyword($any($event.target).value)"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{ "類型" | t }}</mat-label>
+    <mat-select [value]="type" (selectionChange)="updateType($event.value)">
+      <mat-option value="all">{{ "全部" | t }}</mat-option>
+      <mat-option value="income">{{ "收入" | t }}</mat-option>
+      <mat-option value="expense">{{ "支出" | t }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{ "幣別" | t }}</mat-label>
+    <mat-select
+      [value]="currency"
+      (selectionChange)="updateCurrency($event.value)"
+    >
+      <mat-option value="all">{{ "全部" | t }}</mat-option>
+      @for (code of currencies(); track code) {
+        <mat-option [value]="code">{{ code }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{ "最低金額" | t }}</mat-label>
+    <input
+      matInput
+      type="number"
+      [value]="minAmount ?? ''"
+      (input)="updateMinAmount($any($event.target).value)"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{ "排序欄位" | t }}</mat-label>
+    <mat-select [value]="sortBy" (selectionChange)="updateSortBy($event.value)">
+      <mat-option value="date">{{ "日期" | t }}</mat-option>
+      <mat-option value="amount">{{ "金額" | t }}</mat-option>
+      <mat-option value="category">{{ "分類" | t }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{ "排序方向" | t }}</mat-label>
+    <mat-select
+      [value]="sortDirection"
+      (selectionChange)="updateSortDirection($event.value)"
+    >
+      <mat-option value="desc">{{ "由大到小 / 由新到舊" | t }}</mat-option>
+      <mat-option value="asc">{{ "由小到大 / 由舊到新" | t }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{ "分組方式" | t }}</mat-label>
+    <mat-select
+      [value]="groupBy"
+      (selectionChange)="updateGroupBy($event.value)"
+    >
+      <mat-option value="category">{{ "分類" | t }}</mat-option>
+      <mat-option value="currency">{{ "幣別" | t }}</mat-option>
+      <mat-option value="month">{{ "月份" | t }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-stroked-button type="button" (click)="reset()">
+    {{ "清除條件" | t }}
+  </button>
+</div>

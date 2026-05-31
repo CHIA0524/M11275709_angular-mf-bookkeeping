@@ -1,0 +1,129 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ isEditMode ? "編輯帳目" : "快速記帳" }}</mat-card-title>
+    <mat-card-subtitle
+      >透過多步驟表單，快速記錄您的收入或支出</mat-card-subtitle
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <mat-stepper linear #stepper>
+      <!-- Step 1: Type and Category -->
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>類型與分類</ng-template>
+          <div class="form-field-container">
+            <label id="type-radio-group-label">類型</label>
+            <mat-radio-group
+              aria-labelledby="type-radio-group-label"
+              formControlName="type"
+              class="radio-group"
+            >
+              <mat-radio-button value="expense">支出</mat-radio-button>
+              <mat-radio-button value="income">收入</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+          <mat-form-field appearance="fill">
+            <mat-label>分類</mat-label>
+            <mat-select formControlName="category">
+              @for(category of currentCategories; track category) {
+              <mat-option [value]="category">{{ category }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>下一步</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Step 2: Amount and Date -->
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>金額與日期</ng-template>
+
+          <mat-form-field appearance="fill">
+            <mat-label>幣別</mat-label>
+            <mat-select formControlName="currency">
+              <mat-option value="TWD">新台幣 (TWD)</mat-option>
+              <mat-option value="USD">美金 (USD)</mat-option>
+              <mat-option value="JPY">日圓 (JPY)</mat-option>
+              <mat-option value="EUR">歐元 (EUR)</mat-option>
+              <mat-option value="KRW">韓元 (KRW)</mat-option>
+              <mat-option value="CNY">人民幣 (CNY)</mat-option>
+              <mat-option value="HKD">港幣 (HKD)</mat-option>
+              <mat-option value="AUD">澳幣 (AUD)</mat-option>
+              <mat-option value="GBP">英鎊 (GBP)</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>金額</mat-label>
+            <input
+              matInput
+              type="number"
+              formControlName="amount"
+              placeholder="例如: 150"
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>日期</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date" />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>上一步</button>
+            <button mat-button matStepperNext>下一步</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Step 3: Notes and Review -->
+      <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup">
+          <ng-template matStepLabel>備註與預覽</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>備註 (選填)</mat-label>
+            <textarea
+              matInput
+              formControlName="notes"
+              placeholder="例如: 與朋友聚餐"
+            ></textarea>
+          </mat-form-field>
+
+          <!-- Review Section -->
+          <div class="review-section">
+            <h4>確認資料</h4>
+            <p>
+              <strong>類型:</strong>
+              {{ firstFormGroup.value.type === "expense" ? "支出" : "收入" }}
+            </p>
+            <p><strong>分類:</strong> {{ firstFormGroup.value.category }}</p>
+            <p>
+              <strong>金額:</strong> {{ secondFormGroup.value.amount | number }}
+            </p>
+            <p>
+              <strong>日期:</strong>
+              {{ secondFormGroup.value.date | date : "yyyy/MM/dd" }}
+            </p>
+            <p>
+              <strong>備註:</strong> {{ thirdFormGroup.value.notes || "無" }}
+            </p>
+          </div>
+
+          <div>
+            <button mat-button matStepperPrevious>上一步</button>
+            <button mat-raised-button color="primary" (click)="onSubmit()">
+              {{ isEditMode ? "更新" : "完成" }}
+            </button>
+          </div>
+        </form>
+      </mat-step>
+    </mat-stepper>
+  </mat-card-content>
+</mat-card>

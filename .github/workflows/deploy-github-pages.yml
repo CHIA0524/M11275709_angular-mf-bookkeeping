@@ -1,0 +1,136 @@
+name: Deploy Bookkeeping to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - src/**
+      - public/**
+      - angular.json
+      - federation.config.js
+      - package.json
+      - package-lock.json
+      - tsconfig.app.json
+      - tsconfig.federation.json
+      - tsconfig.json
+      - tsconfig.spec.json
+      - .github/workflows/deploy-github-pages.yml
+  workflow_dispatch:
+    inputs:
+      comparison_profile:
+        description: Compare cold or warm CI baseline
+        required: true
+        default: warm
+        type: choice
+        options:
+          - cold
+          - warm
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NG_PERSISTENT_BUILD_CACHE: 1
+      NODE_OPTIONS: --max-old-space-size=6144
+
+    steps:
+      - name: Resolve comparison profile
+        id: comparison-profile
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            PROFILE="${{ github.event.inputs.comparison_profile }}"
+          else
+            PROFILE="warm"
+          fi
+
+          echo "profile=$PROFILE" >> "$GITHUB_OUTPUT"
+          echo "Using comparison profile: $PROFILE"
+
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js (warm cache)
+        if: steps.comparison-profile.outputs.profile == 'warm'
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20.19.0
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Setup Node.js (cold baseline)
+        if: steps.comparison-profile.outputs.profile == 'cold'
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20.19.0
+
+      - name: Restore node_modules cache
+        if: steps.comparison-profile.outputs.profile == 'warm'
+        uses: actions/cache@v5
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules-bookkeeping-node-20.19.0-${{ hashFiles('package-lock.json') }}
+
+      - name: Restore Angular cache
+        if: steps.comparison-profile.outputs.profile == 'warm'
+        uses: actions/cache@v5
+        with:
+          path: .angular/cache
+          key: ${{ runner.os }}-angular-bookkeeping-${{ hashFiles('package-lock.json', 'angular.json', 'federation.config.js', 'tsconfig*.json') }}
+          restore-keys: |
+            ${{ runner.os }}-angular-bookkeeping-
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          echo "Install mode: ${{ steps.comparison-profile.outputs.profile }}"
+          npm ci --no-audit --no-fund
+
+      - name: Restore Native Federation cache
+        if: steps.comparison-profile.outputs.profile == 'warm'
+        uses: actions/cache@v5
+        with:
+          path: node_modules/.cache/native-federation
+          key: ${{ runner.os }}-native-federation-bookkeeping-${{ hashFiles('package-lock.json', 'angular.json', 'federation.config.js', 'tsconfig*.json') }}
+          restore-keys: |
+            ${{ runner.os }}-native-federation-bookkeeping-
+
+      - name: Build Angular app
+        run: npm run build -- --configuration production --base-href "/M11275709_angular-mf-bookkeeping/"
+
+      - name: Prepare Pages artifact
+        shell: bash
+        run: |
+          cp dist/bookkeeping/browser/index.html dist/bookkeeping/browser/404.html
+          touch dist/bookkeeping/browser/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist/bookkeeping/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

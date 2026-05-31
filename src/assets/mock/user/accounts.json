@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin123",
+      "displayName": "系統管理員"
+    },
+    {
+      "username": "user",
+      "password": "user123",
+      "displayName": "一般使用者"
+    },
+    {
+      "username": "test",
+      "password": "test123",
+      "displayName": "測試帳號"
+    }
+  ]
+}
