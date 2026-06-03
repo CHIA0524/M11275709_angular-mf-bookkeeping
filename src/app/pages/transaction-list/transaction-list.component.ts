@@ -56,7 +56,9 @@ export class TransactionListComponent implements OnInit {
     readonly tableStore: TransactionTableStore
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {  
+    console.log('test')
+  }
 
   updateFilters(filters: TransactionFilters): void {
     this.tableStore.setFilters(filters);
