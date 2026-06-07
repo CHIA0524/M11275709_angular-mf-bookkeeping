@@ -123,7 +123,11 @@ jobs:
           DIST="dist/bookkeeping/browser"
           IDX_FILES=$(grep -oE '[a-zA-Z0-9._-]+\.js' "$DIST/index.html" 2>/dev/null | sort -u)
           in_index() { echo "$IDX_FILES" | grep -qF "$(basename "$1")"; }
-          MAIN_B=0; POLY_B=0; EAGER_B=0; LAZY_B=0
+          MAIN_B=0; POLY_B=0; CSS_B=0; EAGER_B=0; LAZY_B=0
+
+          echo ""
+          echo "  M11275709 Angular MF — bookkeeping"
+          echo "  =================================="
 
           echo ""
           echo "  [main]"
@@ -152,6 +156,14 @@ jobs:
           done
 
           echo ""
+          echo "  [styles]"
+          for f in "$DIST"/styles*.css; do
+            [ -f "$f" ] || continue
+            b=$(wc -c < "$f"); CSS_B=$((CSS_B+b))
+            printf "    %8.1f kB  %s\n" "$(awk "BEGIN{printf \"%.1f\",$b/1024}")" "$(basename "$f")"
+          done
+
+          echo ""
           echo "  [chunks — lazy loaded]"
           for f in $(find "$DIST" -maxdepth 1 -name "chunk-*.js" | sort); do
             [ -f "$f" ] || continue
@@ -166,12 +178,12 @@ jobs:
           echo "=================================="
           printf "  main.js              : %8.1f kB\n" "$(awk "BEGIN{printf \"%.1f\",$MAIN_B/1024}")"
           printf "  polyfills            : %8.1f kB\n" "$(awk "BEGIN{printf \"%.1f\",$POLY_B/1024}")"
+          printf "  styles.css           : %8.1f kB\n" "$(awk "BEGIN{printf \"%.1f\",$CSS_B/1024}")"
           printf "  eager chunks (index) : %8.1f kB\n" "$(awk "BEGIN{printf \"%.1f\",$EAGER_B/1024}")"
           printf "  lazy chunks          : %8.1f kB\n" "$(awk "BEGIN{printf \"%.1f\",$LAZY_B/1024}")"
           echo "  ----------------------------------"
           printf "  Application logic    : %8.1f kB  (main + eager chunks)\n" "$(awk "BEGIN{printf \"%.1f\",$LOGIC_B/1024}")"
           echo "=================================="
-
       - name: Prepare Pages artifact
         shell: bash
         run: |
