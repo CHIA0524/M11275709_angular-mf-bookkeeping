@@ -125,9 +125,6 @@ jobs:
           in_index() { echo "$IDX_FILES" | grep -qF "$(basename "$1")"; }
           MAIN_B=0; POLY_B=0; CSS_B=0; EAGER_B=0; LAZY_B=0
 
-          echo ""
-          echo "  M11275709 Angular MF — bookkeeping"
-          echo "  =================================="
 
           echo ""
           echo "  [main]"
@@ -175,6 +172,7 @@ jobs:
 
           LOGIC_B=$((MAIN_B+EAGER_B))
           echo ""
+          echo "  M11275709 Angular MF — bookkeeping"
           echo "=================================="
           printf "  main.js              : %8.1f kB\n" "$(awk "BEGIN{printf \"%.1f\",$MAIN_B/1024}")"
           printf "  polyfills            : %8.1f kB\n" "$(awk "BEGIN{printf \"%.1f\",$POLY_B/1024}")"
